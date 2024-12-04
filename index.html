@@ -23,8 +23,7 @@
           <li><a href="#services" class="nav-link">Послуги</a></li>
           <li><a href="#masters" class="nav-link">Майстри</a></li>
           <li><a href="#contact" class="nav-link">Контакти</a></li>
-          <li><a href="#ai-helper" class="nav-link">AI-помічник</a></li>
-        </ul>
+                  </ul>
         <div class="working-hours">
           <p>Робочі години:</p>
           <p>20:00 - 24:00 та 5:00 - 8:00 - виїзд на місце</p>
@@ -117,19 +116,7 @@
         </form>
       </section>
 
-      <section id="ai-helper" class="ai-helper">
-        <h2 class="section-title">AI-помічник</h2>
-        <div class="ai-helper-container">
-          <textarea
-            id="ai-input"
-            placeholder="Опишіть вашу проблему..."
-          ></textarea>
-          <button id="ai-submit" class="btn btn-primary">
-            Отримати допомогу
-          </button>
-          <div id="ai-response"></div>
-        </div>
-      </section>
+      
     </main>
 
     <footer>
@@ -163,6 +150,53 @@
       <div class="footer-bottom">
         <p>&copy; 2024 Автолікар 24/7. Всі права захищені.</p>
       </div>
+      <section id="profile" class="profile">
+        <h2 class="section-title">Мій профіль</h2>
+        <div class="profile-info">
+          <p><strong>Ім'я:</strong> <span id="user-name">Іван Іванов</span></p>
+          <p><strong>Email:</strong> <span id="user-email">ivan@example.com</span></p>
+          <p><strong>Телефон:</strong> <span id="user-phone">+380123456789</span></p>
+        </div>
+
+        <button id="edit-profile-btn" class="btn">Редагувати профіль</button>
+
+        <div id="edit-profile-form" class="edit-profile-form" style="display: none;">
+          <h3>Редагувати профіль</h3>
+          <form id="edit-profile">
+            <div class="form-group">
+              <input type="text" id="edit-name" value="Іван Іванов" required />
+              <label for="edit-name">Ваше ім'я</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="edit-email" value="ivan@example.com" required />
+              <label for="edit-email">Ваш email</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="edit-phone" value="+380123456789" required />
+              <label for="edit-phone">Ваш телефон</label>
+            </div>
+            <button type="submit" class="btn btn-submit">Зберегти зміни</button>
+          </form>
+        </div>
+      </section>
+      <div class="profile-icon" id="profile-button">
+        <i class="fas fa-user-circle"></i>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Окрема сторінка профілю -->
+  <section id="profile-page" class="profile-page" style="display: none;">
+    <div class="profile-content">
+      <h2>Мій профіль</h2>
+      <p><strong>Ім'я:</strong> <span id="user-name">Іван Іванов</span></p>
+      <p><strong>Email:</strong> <span id="user-email">ivan@example.com</span></p>
+      <p><strong>Телефон:</strong> <span id="user-phone">+380123456789</span></p>
+      <button id="edit-profile-btn" class="btn">Редагувати профіль</button>
+    </div>
+  </section>
+    </main>
+
     </footer>
 
     <script src="main.js"></script>

@@ -250,3 +250,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  // Кнопка для редагування профілю
+  const editProfileBtn = document.getElementById('edit-profile-btn');
+  const editProfileForm = document.getElementById('edit-profile-form');
+  const userName = document.getElementById('user-name');
+  const userEmail = document.getElementById('user-email');
+  const userPhone = document.getElementById('user-phone');
+
+  // Перемикач між переглядом профілю і його редагуванням
+  editProfileBtn.addEventListener('click', function() {
+    editProfileForm.style.display = 'block';
+    // Оскільки ми починаємо редагування, приховуємо профіль
+    editProfileBtn.style.display = 'none';
+  });
+
+  // Обробка форми редагування профілю
+  const editProfile = document.getElementById('edit-profile');
+  editProfile.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Оновлюємо дані на сторінці
+    userName.textContent = document.getElementById('edit-name').value;
+    userEmail.textContent = document.getElementById('edit-email').value;
+    userPhone.textContent = document.getElementById('edit-phone').value;
+
+    // Приховуємо форму редагування та повертаємо кнопку "Редагувати профіль"
+    editProfileForm.style.display = 'none';
+    editProfileBtn.style.display = 'block';
+  });
+});
